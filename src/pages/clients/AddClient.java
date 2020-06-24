@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 public class AddClient {
 
@@ -18,6 +19,18 @@ public class AddClient {
 
     @FindBy (xpath="//input[@id='client_city']")
     WebElement txtCity;
+
+
+    @FindBy (name="client_language")
+    WebElement drplanguage;
+
+    public void setlaguage(String language)
+    {
+        Select selLanguage = new Select(drplanguage);
+        selLanguage.selectByValue(language);
+    }
+
+
 
     public  AddClient(WebDriver driver)
     {

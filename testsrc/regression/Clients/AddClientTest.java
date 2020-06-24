@@ -22,6 +22,8 @@ public class AddClientTest extends BaseDoLogin {
         addClient.setTxtStreetAddress("katraj");
         addClient.setTxtCity("Pune");
 
+        addClient.setlaguage("Danish");
+
 
 
     }
