@@ -15,7 +15,8 @@ public class BaseOpenBrowser {
 
     @BeforeClass
     public void openUrl() throws IOException {
-        driver = getDriver(Driver.DriverTypes.CHROME);
+        driver = getDriver(Driver.DriverTypes.FIREFOX);
+
         driver.get(getUrl());
     }
 
