@@ -26,16 +26,19 @@ public class Login {
     // Using the page factory
 
     @FindBy (xpath="//input[@id='email']")
-    WebElement txtUsername;
+    public WebElement txtUsername;
 
     @FindBy (xpath="//input[@id='password']")
-    WebElement txtPaword;
+    public WebElement txtPaword;
 
     @FindBy (xpath="//button[@type='submit']")
-    WebElement btnLogin;
+    public WebElement btnLogin;
 
     @FindBy (xpath="//a[@class='btn btn-default']")
-    WebElement lnkForgotPassword;
+    public WebElement lnkForgotPassword;
+
+    @FindBy (xpath="//label[@for='email']")
+    public WebElement lblEmail;
 
     public void clickLnkPassword()
     {

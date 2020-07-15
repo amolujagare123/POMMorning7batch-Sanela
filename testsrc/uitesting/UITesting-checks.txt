@@ -1,0 +1,13 @@
+UI Testing - user interface testing
+here we never do the functionality testing
+
+1. visiblility of webelement - done
+2. enabilty of element - done
+3. spellings of text present on the webpage
+4. color of webelements (text/label/webelements)
+5. font
+6. heading tag
+7. selection - code done / issue
+8. watermark -done
+
+
