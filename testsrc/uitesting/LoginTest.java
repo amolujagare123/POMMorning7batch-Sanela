@@ -1,13 +1,21 @@
 package uitesting;
 
+import org.openqa.selenium.support.Color;
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.Login;
 import util.BaseOpenBrowser;
 
 public class LoginTest extends BaseOpenBrowser {
 
-    Login login = new Login(driver);
+    Login login;
+
+    @BeforeClass
+    public void myClass()
+    {
+        login = new Login(driver);
+    }
 
     @Test
     public void checkTxtUsernameVisibility()
@@ -96,5 +104,30 @@ public class LoginTest extends BaseOpenBrowser {
 
         Assert.assertEquals(actual,expected,"incorrect watermark or watermark is absent");
     }
+
+    @Test
+    public void checkBtnLofinColor()
+    {
+        String expected = "#2C8EDD";
+        String actual="";
+
+        try
+        {
+            String colrRgb = login.btnLogin.getCssValue("background-color");
+
+            System.out.println("color in rgb:"+colrRgb);
+                actual =  Color.fromString(colrRgb).asHex().toUpperCase();
+
+               System.out.println("Converted color in hex:"+actual);
+        }
+        catch (Exception e)
+        {
+              e.printStackTrace();
+        }
+
+        Assert.assertEquals(actual,expected,"incorrect watermark or watermark is absent");
+
+    }
+
 
 }
