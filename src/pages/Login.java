@@ -40,6 +40,9 @@ public class Login {
     @FindBy (xpath="//label[@for='email']")
     public WebElement lblEmail;
 
+    @FindBy (xpath="//div[@id='login']//h1")
+    public WebElement lblLogin;
+
     public void clickLnkPassword()
     {
         lnkForgotPassword.click();

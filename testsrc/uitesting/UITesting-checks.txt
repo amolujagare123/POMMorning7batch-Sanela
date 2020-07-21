@@ -4,9 +4,9 @@ here we never do the functionality testing
 1. visiblility of webelement - done
 2. enabilty of element - done
 3. spellings of text present on the webpage
-4. color of webelements (text/label/webelements)
-5. font
-6. heading tag
+4. color of webelements (text/label/webelements) - done
+5. font - done
+6. heading tag - done
 7. selection - code done / issue
 8. watermark -done
 

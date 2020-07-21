@@ -1,0 +1,43 @@
+what is class in java ?
+
+calss is a collection of 
+
+data members and - int , float , char 
+member function
+
+
+display() -- is this a function / method
+
+constructor
+
+1. method with the same name as that of the class name
+2. it has no return type (not even void)
+3. it is used to initialize the object
+
+
+ClassDemo()
+{
+ 
+}
+
+1. default constructor :
+when we dont have constructor written in the class then
+default constructor is invoked & it initializes the object
+
+2. Empty constructor
+
+3. normal constructor
+
+4. parameterized constutor
+
+5. parameterized constutor with this operators
+
+6. copy construtor - copy constructor copies one object into another
+
+
+
+
+
+
+
+

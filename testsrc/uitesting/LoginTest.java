@@ -2,6 +2,7 @@ package uitesting;
 
 import org.openqa.selenium.support.Color;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.Login;
@@ -129,5 +130,58 @@ public class LoginTest extends BaseOpenBrowser {
 
     }
 
+
+    @Test
+    public void checkLblEmailFontFamily()
+    {
+        String expeced = "-apple-system, system-ui, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif";
+
+        String actual = login.lblEmail.getCssValue("font-family");
+
+        Assert.assertEquals(actual.trim(),expeced.trim());
+
+    }
+
+
+    @Test
+    public void checkLblEmailSpecificFont()
+    {
+        String expeced = "sans-serif1";
+
+        String fontFamily = login.lblEmail.getCssValue("font-family");
+        System.out.println(fontFamily);
+
+        System.out.println(fontFamily.contains(expeced));
+
+        Assert.assertTrue(fontFamily.contains(expeced),"the font '"+expeced+"' is not there in the font family");
+
+
+       // Assert.assertEquals(actual.trim(),expeced.trim());
+
+    }
+
+
+    @Test
+    public void checklblEmailFontSize()
+    {
+        String expected ="14px";
+        String actual = login.lblEmail.getCssValue("font-size");
+        Assert.assertEquals(actual,expected,"incorrect font size");
+
+    }
+
+    @Test
+    public  void checklblLoginHeaderProperty()
+    {
+        String expected = "h1";
+        String actual = login.lblLogin.getTagName();
+        Assert.assertEquals(actual,expected,"The given label is not a header");
+    }
+
+    @AfterClass
+    public void afterAll()
+    {
+        driver.close();
+    }
 
 }
