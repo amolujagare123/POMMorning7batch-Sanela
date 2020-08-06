@@ -1,0 +1,28 @@
+<suite name="project name">
+
+   <!-- <listeners>
+        <listener class-name="org.testng.reporters.EmailableReporter2" />
+    </listeners>-->
+
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
+
+
+    <test name="Module 1"> <!--test tag-->
+        <classes>
+            <class name="ReportGenerationPractice.ClassOne"/>
+        </classes>
+
+    </test>
+
+    <test name="Module 2">
+        <classes>
+            <class name="ReportGenerationPractice.ClassTwo"/>
+           <class name="ReportGenerationPractice.ClassThree"/>
+        </classes>
+    </test>
+
+
+</suite>
